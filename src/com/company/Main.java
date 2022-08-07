@@ -11,34 +11,32 @@ public class Main {
         double result;
 
         System.out.println("Lütfen ad ve soyadınızı giriniz");
-        Scanner input1 = new Scanner(System.in);
-        fullname = input1.nextLine();
+        Scanner fullnameInput = new Scanner(System.in);
+        fullname = fullnameInput.nextLine();
 
         System.out.println("Lütfen quiz notunuzu giriniz");
-        Scanner input2 = new Scanner(System.in);
-        quiz = input2.nextInt();
+        Scanner quizInput = new Scanner(System.in);
+        quiz = quizInput.nextInt();
 
         System.out.println("Lütfen vize notunuzu giriniz");
-        Scanner input3 = new Scanner(System.in);
-        visa = input3.nextInt();
+        Scanner visaInput = new Scanner(System.in);
+        visa = visaInput.nextInt();
 
         System.out.println("Lütfen final notunuzu giriniz");
-        Scanner input4 = new Scanner(System.in);
-        finalExam = input4.nextInt();
+        Scanner finalInput = new Scanner(System.in);
+        finalExam = finalInput.nextInt();
 
         result = (quiz * 0.10) + (visa * 0.30) + (finalExam * 0.60);
         degree = Calculate(result);
 
-        System.out.printf("Sayın %s Not Ortalamanız %s %n", fullname, degree);
-
         if(result > 0 && result <= 100)
         {
-            if (degree == "FF")
-            {
+            System.out.printf("Sayın %s Not Ortalamanız %s %n", fullname, degree);
+
+            if (degree == "FF") {
                 System.out.println("Sınıfta kaldınız");
             }
-            else
-            {
+            else {
                 System.out.println("Sınıfı geçtiniz");
             }
         }
